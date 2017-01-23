@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>MVVM</title>
+    <style type="text/css">
+    .bold {
+      font-weight: 700;
+    }
+    </style>
+  </head>
+  <body>
+  	<div id="root">
+      <h1 data-model="title" data-class="className"></h1>
+      <input data-event="typeWriter" value="Hello MVVM"/>
+    </div>
+    <script type="text/javascript" src="bundle.js"></script>
+    <script type="text/javascript">
+    //测试数据
+    (function() {
+      var data = {
+          title: 'Hello MVVM',
+          className: 'bold'
+      }
+      var Root = document.getElementById('root');
+      MVVM(Root, data)
+    })();
+    
+    </script>
+  </body>
+</html>
